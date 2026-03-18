@@ -1,1 +1,1 @@
-models folder
+folder with saved training checkpoints
