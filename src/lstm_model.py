@@ -36,7 +36,7 @@ class TextAutoCompleteLSTM(nn.Module):
         logits  = self.ln(mean_output)
         return logits
     
-    def generate(self, max_new_tokens, input_ids, **kwargs): 
+    def generate(self, max_new_tokens, input_ids, **kwargs): #**kwargs чтобы не мешали attention mask и все остальное что поступает от токенизатора
         seq = input_ids.to(self.device)
         length = torch.tensor(input_ids.shape[1]).unsqueeze(0)
         for _ in range(max_new_tokens):

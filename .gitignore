@@ -1,2 +1,4 @@
 data/*
 !data/folder_description.txt
+models/*
+!models/folder_description.txt
